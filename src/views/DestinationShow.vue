@@ -12,8 +12,9 @@
 <script setup>
 import { useRoute,onBeforeRouteUpdate } from 'vue-router';
 import sourceData from '~/data.json';
-import { onBeforeMount,ref,defineProps } from 'vue';
+import { ref } from 'vue';
 const route = useRoute()
+
 const props = defineProps({
     id: {
         type:  Number,
@@ -24,7 +25,6 @@ const props = defineProps({
         required: true
     }
 })
-console.log(props)
 // 这边去除是因为可以通过路由props传参
 // const destinationID = parseInt(route.params.id)
 // sourceData.destinations.find(destination => destination.id === destinationID)
